@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Instagram Graph API Auth App</title>
+      <meta charset="UTF-8">
+   </head>
+   <body>
+      <script>
+         function statusChangeCallback(response) {  // from FB.getLoginStatus().
+           console.log('statusChangeCallback');
+           console.log(response);                   // response = login status of user
+           if (response.status === 'connected') {   // connected = person logged into fb AND the webpage, not_authorized = fb but not webpage  , and unknown = not logged into fb 
+              document.getElementById('status').innerHTML = response.accessToken;
+             testAPI();  
+           } else {                                 // other anomalies
+             document.getElementById('status').innerHTML = 'Please login.';
+           }
+         }
+         
+         
+         function checkLoginState() {               // Called when a person is finished with the Login Button.
+           FB.getLoginStatus(function(response) {   // See the onlogin handler
+             statusChangeCallback(response);
+           });
+         }
+         
+         
+         window.fbAsyncInit = function() { // javascript sdk setup
+           FB.init({
+             appId            : '576756513229634',
+             autoLogAppEvents : true,
+             xfbml            : true,
+             cookie           : true,
+             version          : 'v7.0'
+           });
+           FB.getLoginStatus(function(response) {   // called after sdk
+             statusChangeCallback(response);        // response = login status
+           });
+         };
+         
+         
+          (function(d, s, id) {                      // load sdk async
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+         
+         
+         function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+           console.log('Welcome!  Fetching your information.... ');
+           FB.api('/me', function(response) {
+             console.log('Successful login for: ' + response.name);
+             document.getElementById('status').innerHTML =
+               'Thanks for logging in, ' + response.name + '!';
+           });
+         }
+         
+      </script>
+      <div id="status"></div>
+      <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true" data-width="" onlogin="checkLoginState();" scope="public_profile,email,instagram_basic,pages_show_list"></div>
+   </body>
+</html>
