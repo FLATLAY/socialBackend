@@ -12,6 +12,7 @@ curl -i -X GET \
 "https://graph.facebook.com/v7.0/me/accounts?access_token={'accessToken'}"
 ```
 
+Response
 ```
 HTTP/2 200 vary: Accept-Encoding etag: "f6eb2dbd4ed7aee364a5b8a1dbb5a73b14520290" x-app-usage: {
     "call_count": 0, "total_cputime":0, "total_time":0
