@@ -19,14 +19,14 @@ HTTP/2 200 vary: Accept-Encoding etag: "f6eb2dbd4ed7aee364a5b8a1dbb5a73b14520290
 
 date: Mon, 08 Jun 2020 19:12:38 GMT {
     "data":[ {
-        "access_token":"EAAIMjpcXy0IBANTZAha6J25WruX5I251h4tc8RWoYPdpwJ8ggP1LKZBJWZCcxkNGjlplsEw6VVzTWgwyqWm0McDlAhVZBpShDR5CkjIQJDPYPsqxxLfgRFf8EZBZAykVCFatTZCuoSXFNKVlQM5somYQuRhc9z3eGsqlFXsqw1ZAKJC37Ih4biWCmY5ZBojZBzgcHSo2zS1ZBr6VwZDZD",
-        "category":"Blogger",
+        "access_token":"",
+        "category":"",
         "category_list":[ {
-            "id": "361282040719868", "name":"Blogger"
+            "id": "", "name":"Blogger"
         }
         ],
         "name":"funmblr",
-        "id":"926554251020729",
+        "id":"",
         "tasks":["ANALYZE",
         "ADVERTISE",
         "MODERATE",
@@ -36,7 +36,7 @@ date: Mon, 08 Jun 2020 19:12:38 GMT {
     ],
     "paging": {
         "cursors": {
-            "before": "OTI2NTU0MjUxMDIwNzI5", "after":"OTI2NTU0MjUxMDIwNzI5"
+            "before": "", "after":"OTI2NTU0MjUxMDIwNzI5"
         }
     }
 }
