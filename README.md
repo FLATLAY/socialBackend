@@ -47,7 +47,7 @@ date: Mon, 08 Jun 2020 19:12:38 GMT {
 ## Get the Page's IG accounts:
 ```bash
 curl -i -X GET \
- "https://graph.facebook.com/v7.0/134895793791914?fields=instagram_business_account&access_token={accessToken}"
+ "https://graph.facebook.com/v7.0/'pageID'?fields=instagram_business_account&access_token={'accessToken'}"
 ```
 
 ### Response
@@ -57,5 +57,43 @@ curl -i -X GET \
     "id": ""  // ig user id
   },
   "id": ""  // page id
+}
+```
+
+## Get Media Objects from Instagram
+```bash
+curl -i -X GET \
+ "https://graph.facebook.com/v7.0/17841405822304914/media?access_token={access-token}"
+```
+
+### Response
+```
+{
+  "data": [
+    {
+      "id": "17918195224117851"
+    },
+    {
+      "id": "17895695668004550"
+    },
+    {
+      "id": "17899305451014820"
+    },
+    {
+      "id": "17896450804038745"
+    },
+    {
+      "id": "17881042411086627"
+    },
+    {
+      "id": "17869102915168123"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "QVFIUkdGRXA2eHNNTUs4T1ZAXNGFxQTAtd3U4QjBLd1B2NXRMM1NkcnhqRFdBcEUzSDVJZATFoLWtXMWZAGU2VrRTk2RHVtTVlDckI2NjN0UERFa2JrUk4yMW13",
+      "after": "QVFIUmlwbnFsM3N2cV9lZAFdCa0hDeV9qMVliT0VuMmJyNENxZA180c0t6VjFQVEJaTE9XV085aU92OUFLNFB6Szd2amo5aV9rTlVBcnNlWmEtMzYxcE1HSFR3"
+    }
+  }
 }
 ```
