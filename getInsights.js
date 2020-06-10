@@ -1,6 +1,6 @@
 var request = require('request');
 
-accessToken = 'EAARgJ7I8ZCMsBAEJwX9Okuzq15qKQUmEmZCYVYWtSdfXxGndfEmnboox88UP1OTnrL6r5j42gqoa4B2HurS113TkOY3Pay34LfqWJp9gUQ7lKnujPl002ySnHyjLplm2ZAWL8abA3K6d8hdckZAxH9yjXA1UUNNtyEsEESn3buRdPHmMBvfUQkgqrkhf9FL0KiPZCbpGfTwZDZD';
+accessToken = '';
 function getUserPages () {
 	var link = 'https://graph.facebook.com/v7.0/me/accounts?access_token=' + accessToken;
 	
