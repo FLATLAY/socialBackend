@@ -1,7 +1,9 @@
 var request = require('request');
 var pageID = '';
 
-const accessToken = '';
+const accessToken = 'EAAJ8AMvFSQ0BAM5u2Q4EHNNGd2egv7NlRClImiNJSZAhydYoG8f31cILSFlO52yQ1EpoQILGXWMH7Agp4V9agbQucEjbQ6DRtWtuISpUOMRkXBjHlOiGR9ulgO6gmXMcJ8oZBwgDAmin04YFl4vN5bZAIDooahcJEVjTZCDRAnAOANHdDJvJZB4ZARs7M8AZCDh0i08yyqmOAZDZD';
+
+exports.accessToken = accessToken;
 
 var getUserPages = function () {
 	var link = 'https://graph.facebook.com/v7.0/me/accounts?access_token=' + accessToken;
@@ -15,12 +17,16 @@ var getUserPages = function () {
  		console.log('Error');
  	else {
  		pageID = obj.data[0].id;
- 		exports.pageID = pageID;
-  		console.log('Success, the page IDs of the users are: ' + obj.data[0].id);
+  		console.log('Success, the page IDs of the users are: ' + pageID);
+  		return pageID;
  	}
+
 });
 }
 
-module.exports = {getUserPages : getUserPages};
+module.exports = {
+	getUserPages : getUserPages,
+	accessToken : accessToken
+};
 
 // getUserPages();
