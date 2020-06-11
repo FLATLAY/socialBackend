@@ -1,7 +1,7 @@
 var request = require('request');
 var pageID = '';
 
-const accessToken = 'EAAJ8AMvFSQ0BAM5u2Q4EHNNGd2egv7NlRClImiNJSZAhydYoG8f31cILSFlO52yQ1EpoQILGXWMH7Agp4V9agbQucEjbQ6DRtWtuISpUOMRkXBjHlOiGR9ulgO6gmXMcJ8oZBwgDAmin04YFl4vN5bZAIDooahcJEVjTZCDRAnAOANHdDJvJZB4ZARs7M8AZCDh0i08yyqmOAZDZD';
+const accessToken = '';
 
 exports.accessToken = accessToken;
 
